@@ -30,9 +30,13 @@
 			}
 
 			.item {
+				display: block;
 				width: 128px;
+				margin: 8px;
 				padding: 8px;
 				cursor: pointer;
+				text-decoration: none;
+				color: inherit;
 				border: 1px solid rgba(0, 0, 0, .07);
 				border-radius: 5px;
 				background-color: #fff;
@@ -40,8 +44,13 @@
 			}
 
 			.item__preview {
+				display: block;
 				height: 96px;
 				border-radius: 5px;
+				background-color: #f7f7f7;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
 			}
 
 			.item--new .item__preview {
@@ -54,7 +63,7 @@
 				top: 50%;
 				left: 50%;
 				display: block;
-				width: 56px;
+				width: 48px;
 				height: 2px;
 				content: '';
 				transform: translate(-50%, -50%);
@@ -67,6 +76,7 @@
 
 			.item__label {
 				font-size: 14px;
+				display: block;
 				margin: 6px 0 2px;
 			}
 
@@ -86,5 +96,8 @@
 			</div>
 		</main>
 		<footer></footer>
+
+		<link rel="stylesheet" href="styles.css">
+		<script src="script.js"></script>
 	</body>
 </html>

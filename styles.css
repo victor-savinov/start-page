@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Context menu
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# CONTEXT MENU
+--------------------------------------------------------------*/
+
+.context-menu {
+	font-size: 14px;
+	position: absolute;
+	width: 256px;
+	border: 1px solid #e0e0e0;
+	border-radius: 3px;
+	background: #fff;
+	box-shadow: 0 18px 32px 0 rgba(0, 0, 0, .1);
+}
+
+.context-menu button {
+	font: inherit;
+	width: 100%;
+	min-width: 0;
+	max-width: unset;
+	height: 32px;
+	padding: 0 32px;
+	text-align: left;
+	color: inherit;
+	border: none;
+	background: transparent;
+}
+
+.context-menu button:hover {
+	background: rgba(0, 0, 0, .05);
+}

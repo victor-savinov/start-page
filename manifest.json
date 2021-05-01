@@ -3,10 +3,16 @@
     "name": "Start Page",
     "version": "1.0",
     "default_locale": "en",
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
     "chrome_url_overrides": {
         "newtab": "index.html"
     },
     "permissions": [
-        "storage"
+        "storage",
+        "<all_urls>"
     ]
 }
