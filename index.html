@@ -6,8 +6,10 @@
 		<title>Start Page</title>
 		<style>
 			body {
+				font-size: 16px;
 				overflow: hidden;
 				margin: 0;
+				color: #2f374f;
 				background: #fff;
 			}
 
@@ -18,7 +20,54 @@
 			}
 
 			main {
-				height: calc(100vh - 96px);
+				display: flex;
+				width: 1160px;
+				height: calc(100vh - 160px);
+				margin: auto;
+				padding: 32px 16px;
+				justify-content: flex-start;
+				align-items: flex-start;
+			}
+
+			.item {
+				width: 128px;
+				padding: 8px;
+				cursor: pointer;
+				border: 1px solid rgba(0, 0, 0, .07);
+				border-radius: 5px;
+				background-color: #fff;
+				box-shadow: 0 2px 64px 0 rgba(0, 0, 0, .05);
+			}
+
+			.item__preview {
+				height: 96px;
+				border-radius: 5px;
+			}
+
+			.item--new .item__preview {
+				position: relative;
+			}
+
+			.item--new .item__preview::before,
+			.item--new .item__preview::after {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				display: block;
+				width: 56px;
+				height: 2px;
+				content: '';
+				transform: translate(-50%, -50%);
+				background: #bcbec2;
+			}
+
+			.item--new .item__preview::after {
+				transform: translate(-50%, -50%) rotate(90deg);
+			}
+
+			.item__label {
+				font-size: 14px;
+				margin: 6px 0 2px;
 			}
 
 			footer {
@@ -30,7 +79,12 @@
 	</head>
 	<body>
 		<header></header>
-		<main></main>
+		<main>
+			<div class="item item--new">
+				<div class="item__preview"></div>
+				<div class="item__label">Add New Item</div>
+			</div>
+		</main>
 		<footer></footer>
 	</body>
 </html>
