@@ -139,6 +139,36 @@ function openContextMenu(x, y, element) {
 
 	container.appendChild(change_url_button);
 
+	var change_preview_button = document.createElement('button');
+
+	change_preview_button.textContent = 'Upload preview';
+	change_preview_button.addEventListener('click', function() {
+		var self = this,
+			input = document.createElement('input');
+
+        input.type = 'file';
+
+        input.addEventListener('change', function() {
+            var file_reader = new FileReader();
+
+            file_reader.onload = function() {
+            	var skeleton = self.parentNode.element.skeleton,
+            	object = {};
+
+            	self.parentNode.element.querySelector('.item__preview').style.backgroundImage = 'url(' + this.result + ')';
+				object[skeleton.parent[skeleton.index].url] = this.result;
+
+				chrome.storage.local.set(object);
+            };
+
+            file_reader.readAsDataURL(this.files[0]);
+        });
+
+        input.click();
+	});
+
+	container.appendChild(change_preview_button);
+
 	document.body.appendChild(container);
 }
 
